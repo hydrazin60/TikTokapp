@@ -15,34 +15,31 @@ import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import Feather from "@expo/vector-icons/Feather";
 import Fontisto from "@expo/vector-icons/Fontisto";
+import { Link } from "expo-router";
 
 export default function Home() {
   const { width, height } = Dimensions.get("window");
-
   const rotateValue = useRef(new Animated.Value(0)).current;
-
- 
 
   useEffect(() => {
     const startRotation = () => {
       Animated.loop(
         Animated.timing(rotateValue, {
-          toValue: 1,  
-          duration: 2000, 
-          useNativeDriver: true,  
-          easing: Easing.linear,  
+          toValue: 1,
+          duration: 2000,
+          useNativeDriver: true,
+          easing: Easing.linear,
         })
-      ).start();  
+      ).start();
     };
-    startRotation();  
-  
-    return () => rotateValue.stopAnimation();  
+    startRotation();
+
+    return () => rotateValue.stopAnimation();
   }, [rotateValue]);
   const rotate = rotateValue.interpolate({
     inputRange: [0, 1],
-    outputRange: ["0deg", "360deg"],  
+    outputRange: ["0deg", "360deg"],
   });
-  
 
   return (
     <View style={{ flex: 1 }}>
@@ -79,9 +76,11 @@ export default function Home() {
           }}
         >
           <Pressable>
-            <Text style={{ color: "white", fontSize: 15, fontWeight: "600" }}>
-              Following
-            </Text>
+            <Link href="/components/follwing">
+              <Text style={{ color: "white", fontSize: 15, fontWeight: "600" }}>
+                Following
+              </Text>
+            </Link>
           </Pressable>
           <Pressable>
             <Text style={{ color: "white", fontSize: 15, fontWeight: "600" }}>

@@ -17,6 +17,17 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    profilePic: {
+      type: String,
+      default: "",
+    },
+    username: {
+      type: String,
+    },
+    bio: {
+      type: String,
+      default: "",
+    },
     flowers: [
       {
         type: mongoose.Schema.Types.ObjectId,
@@ -38,19 +49,19 @@ const userSchema = new mongoose.Schema(
     OwnPosts: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Video",
+        ref: "VideoModel",
       },
     ],
     VideoLikes: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Video",
+        ref: "VideoModel",
       },
     ],
     faverites: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Video",
+        ref: "VideoModel",
       },
     ],
     isAdmin: {

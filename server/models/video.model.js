@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+
 const videoSchema = new mongoose.Schema(
   {
     title: {
@@ -9,12 +10,10 @@ const videoSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
-    autherID: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
-      },
-    ],
+    authorID: {
+      type: mongoose.Schema.Types.ObjectId,  // Single reference to a User (author)
+      ref: "User",
+    },
     love: [
       {
         type: mongoose.Schema.Types.ObjectId,

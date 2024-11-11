@@ -257,7 +257,7 @@ export default function Profile() {
             borderTopLeftRadius: 20,
           }}
         >
-          <ScrollView contentContainerStyle={{ paddingBottom: 120 }}>
+          <ScrollView contentContainerStyle={{ paddingBottom: 150 }}>
             <View
               style={{
                 flexDirection: "row",

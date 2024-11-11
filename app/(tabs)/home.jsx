@@ -53,8 +53,8 @@ export default function Home() {
           uri: "https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478040.jpg?t=st=1728486866~exp=1728490466~hmac=119d3608ffadc6968ac3152eb74e746b0746ea31c1122bbdfbcb21cea0b7270e&w=360",
         }}
         style={{
-          height: height,
-          width: width,
+          height: "100%",
+          width: "100%",
           position: "absolute",
           zIndex: -1,
         }}
